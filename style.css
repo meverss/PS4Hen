@@ -1,0 +1,89 @@
+@font-face {
+ font-family: 'Zrnic';
+ src: url('Zrnic.woff2') format('woff2'),
+         url('Zrnic.ttf') format('truetype'),
+         url('Zrnic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html, body {
+background-image: url('img.jpg');
+background-size: 100%;
+background-repeat: no-repeat;
+background-color: #24272b;
+text-align: center;
+margin: 0px;
+overflow: hidden;
+font-family: 'Zrnic';
+}
+
+h1 {
+font-family: 'Zrnic';
+color: white;
+}
+
+a {
+text-decoration: none;
+}
+
+#msgs {
+font-size: 70px;
+} 
+
+#msgs2 {
+font-size: 48px;
+text-align: center;
+color: #e69b00;
+animation: textzoom;
+animation-duration: 0.5s;
+
+} 
+
+.fadetext {
+/*color: red;*/
+animation: textzoom;
+animation-duration: 0.5s;
+} 
+
+@keyframes textzoom {
+    0% {
+    	font-size: 0px;
+     } 
+     100% {
+     	font-size: 48px;
+     }
+}
+
+#box {
+width: 100hv;
+height: 60vh;
+position: static;
+} 
+
+.btn {
+background-color: #003263;
+color: white;
+width: 227px;
+height: 46px;
+padding-bottom: 5px;
+text-align: center;
+font-size: 20px;
+margin-top: 8px;
+margin-bottom: 8px;
+margin-left: 5px;
+margin-right: 5px;
+border-bottom-width: 0px;
+border-right-width: 0px;
+border-top-width: 0px;
+border-left-width: 0px;
+transition-duration: 0.4s;
+cursor: pointer;
+border-radius: 8px;
+}
+
+.btn:hover {
+background-color: #0058b1;
+}
+

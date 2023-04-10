@@ -18,7 +18,6 @@
 <script>
 if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 </script>
-
 <h1 id=msgs >PS4 Auto GoldHEN Host By MeVeRsS</h1>
 <div class="box">
 </div>
@@ -29,15 +28,12 @@ if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 <script>
 function allset(){
     msgs2.innerHTML = LoadedMSG;
-
 }
 
 function toggle_anims() {
     msgs.classList.toggle('showtext');
     msgs2.classList.toggle('bounchingtext');
-#    alert(window.applicationCache.status);
-    alert("asdasd");
-} 
+}
 
 function load_poc(){
  var req = new XMLHttpRequest();
@@ -63,25 +59,25 @@ function load_poc(){
 }
 
 function jbdone(){
-LoadedMSG = "GoldHEN cargado"; 
+LoadedMSG = "GoldHEN cargado";
 PLFile = "goldhen_v2.4b5.bin";
 load_poc();
 }
 
 function noupdates(){
-LoadedMSG = "GoldHEN cargado"; 
+LoadedMSG = "GoldHEN cargado";
 PLFile = "disable-updates.bin";
 load_poc();
 }
 
 function orbistb(){
-LoadedMSG = "GoldHEN cargado"; 
+LoadedMSG = "GoldHEN cargado";
 PLFile = "Orbis-Toolbox-900.bin";
 load_poc();
 }
 
 function fan60(){
-LoadedMSG = "GoldHEN cargado"; 
+LoadedMSG = "GoldHEN cargado";
 PLFile = "fan60.bin";
 load_poc();
 }

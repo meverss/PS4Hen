@@ -15,21 +15,25 @@
 <script src="kexploit.js"></script>
 <script src="webkit.js"></script>
 </head>
-<body onload="setTimeout(poc, 5000);">
+<body onload="setTimeout(poc, 5000); toggle_anims();">
 <script>
 if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 </script>
 
 <h1 id=msgs >PS4 Auto GoldHEN Host By MeVeRsS</h1>
-<div id="box">
+<div class="box">
 </div>
 <h1 id=msgs2 >Cargando GoldHEN. Espere por favor...</h1>
 <br>
-<script charset="utf-8">
+<script>
 function allset(){
-    msgs2.classList.toggle('fadetext');
 	msgs2.innerHTML = LoadedMSG;
 }
+
+function toggle_anims() {
+    msgs.classList.toggle('showtext');
+    msgs2.classList.toggle('bounchingtext');
+} 
 
 function load_poc(){
  var req = new XMLHttpRequest();

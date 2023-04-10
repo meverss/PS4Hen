@@ -12,16 +12,17 @@ html, body {
 background-image: url('img.jpg');
 background-size: 100%;
 background-repeat: no-repeat;
-background-color: #24272b;
+background-color: Black;
 text-align: center;
 margin: 0px;
 overflow: hidden;
 font-family: 'Zrnic';
+animation: textbounch;
+animation-duration: 1s;
 }
 
 h1 {
-font-family: 'Zrnic';
-color: white;
+/*font-family: 'Zrnic';*/
 }
 
 a {
@@ -30,33 +31,20 @@ text-decoration: none;
 
 #msgs {
 font-size: 70px;
+margin-top: 10px;
+color: white;
+animation: textshow;
+animation-duration: 1s;
 } 
 
 #msgs2 {
 font-size: 48px;
 text-align: center;
 color: #e69b00;
-animation: textzoom;
-animation-duration: 0.5s;
-
+animation-duration: 0.35s;
 } 
 
-.fadetext {
-/*color: red;*/
-animation: textzoom;
-animation-duration: 0.5s;
-} 
-
-@keyframes textzoom {
-    0% {
-    	font-size: 0px;
-     } 
-     100% {
-     	font-size: 48px;
-     }
-}
-
-#box {
+.box {
 width: 100hv;
 height: 60vh;
 position: static;
@@ -87,3 +75,26 @@ border-radius: 8px;
 background-color: #0058b1;
 }
 
+/* Effects & Animations */
+
+.bounchingtext { animation: textbounch; } 
+.hidetext { animation: textfadeout; } 
+.showtext {animation: textshow; } 
+
+@keyframes textbounch {
+      0% { font-size: 0px;  opacity: 0; } 
+    20% { font-size: 78p8; } 
+    40% { font-size: 28px; }
+    60% { font-size: 78px; }
+    80% { font-size: 38px; opacity: 1; }
+}
+
+@keyframes textshow {
+         0% { opacity: 0; } 
+    100% { opacity: 1; visibility: visible; } 
+}
+
+@keyframes textfadeout {
+         0% { opacity: 1; } 
+    100% { opacity: 0;  visibility: hidden; } 
+}

@@ -29,9 +29,15 @@ a {
 text-decoration: none;
 }
 
+p {
+font-size: 22px;
+color: #aaaaaa;
+animation: textshow;
+animation-duration: 1s;
+}
+
 #msgs {
 font-size: 70px;
-/*margin-top: 10px;*/
 color: white;
 animation: textshow;
 animation-duration: 1s;

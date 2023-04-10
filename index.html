@@ -15,7 +15,7 @@
 <script src="kexploit.js"></script>
 <script src="webkit.js"></script>
 </head>
-<body onload="setTimeout(poc, 5000); toggle_anims();">
+<body onload="setTimeout(poc, 5000); toggle_anims(); ">
 <script>
 if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 </script>
@@ -33,6 +33,7 @@ function allset(){
 function toggle_anims() {
     msgs.classList.toggle('showtext');
     msgs2.classList.toggle('bounchingtext');
+    alert(msgs2.classList) ;
 } 
 
 function load_poc(){

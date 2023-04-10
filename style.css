@@ -12,7 +12,7 @@ html, body {
 background-image: url('img.jpg');
 background-size: 100%;
 background-repeat: no-repeat;
-background-color: Black;
+background-color: black;
 text-align: center;
 margin: 0px;
 overflow: hidden;
@@ -31,7 +31,7 @@ text-decoration: none;
 
 #msgs {
 font-size: 70px;
-margin-top: 10px;
+/*margin-top: 10px;*/
 color: white;
 animation: textshow;
 animation-duration: 1s;

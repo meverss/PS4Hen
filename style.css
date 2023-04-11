@@ -1,8 +1,14 @@
 @font-face {
  font-family: 'Zrnic';
- src: url('Zrnic.woff2') format('woff2'),
-         url('Zrnic.ttf') format('truetype'),
-         url('Zrnic.woff') format('woff');
+ src: url('Zrnic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+ font-family: 'DroidSansMono';
+ src: url('DroidSansMono.ttf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -39,11 +45,14 @@ animation-duration: 1s;
 }
 
 #marquee {
+font-family: 'DroidSansMono';
+font-size: 28px;
 width: 150%;
 text-align: left;
 padding-left: 100vw;
 animation: marquee infinite;
-animation-duration: 40s;
+animation-duration: 90s;
+
 } 
 
 #msgs {
@@ -118,7 +127,8 @@ background-color: #0058b1;
 }
 
 @keyframes marquee {
-        0% {translate: -3vw; opacity: 0; } 
-        10% {opacity: 1;} 
-    100% {translate: -280vw; } 
+	0% {transform: translateX(-3vw); opacity: 0; }
+	10% {opacity: 1; } 
+	100% {transform: translateX(-250vw);}
+
 } 

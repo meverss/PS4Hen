@@ -7,10 +7,44 @@
     font-style: normal;
     font-display: swap;
 }
-
 @font-face {
  font-family: 'DroidSansMono';
  src: url('DroidSansMono.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+ font-family: 'GoMono';
+ src: url('GoMono.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+ font-family: 'FiraCode';
+ src: url('FiraCode.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+ font-family: 'DejaVuSansMono';
+ src: url('DejaVuSansMono.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+ font-family: 'Monofur';
+ src: url('Monofur.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+ font-family: 'Symbols';
+ src: url('Symbols.ttf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -23,7 +57,8 @@ background-repeat: no-repeat;
 background-color: #010006;
 text-align: center;
 margin: 0px;
-overflow: hidden;
+/* overflow: hidden; */
+overflow: scroll;
 font-family: 'Zrnic';
 animation: textbounch;
 animation-duration: 1s;
@@ -41,15 +76,13 @@ text-decoration: none;
 footer {
 padding-top: 0px;
 font-size: 36px;
-color: #666;
-animation: textshow;
-animation-duration: 1s;
+color: #999;
 }
 
 #marquee {
-font-family: 'DroidSansMono';
-font-size: 28px;
-width: 150%;
+font-family: 'DejaVuSansMono';
+font-size: 26px;
+width: 2300px;
 text-align: left;
 padding-left: 100vw;
 animation: marquee infinite;
@@ -111,7 +144,7 @@ background-color: #0058b1;
 .marquee {animation: textmarquee; } 
 
 @keyframes textbounch {
-      0% { font-size: 0px;  opacity: 0; } 
+     0% { font-size: 0px;  opacity: 0; } 
     20% { font-size: 78p8; } 
     40% { font-size: 28px; }
     60% { font-size: 78px; }
@@ -119,18 +152,18 @@ background-color: #0058b1;
 }
 
 @keyframes textshow {
-         0% { opacity: 0; } 
+      0% { opacity: 0; } 
     100% { opacity: 1; visibility: visible; } 
 }
 
 @keyframes textfadeout {
-         0% { opacity: 1; } 
+      0% { opacity: 1; } 
     100% { opacity: 0;  visibility: hidden; } 
 }
 
 @keyframes marquee {
-	0% {transform: translateX(-3vw); opacity: 0; }
-	10% {opacity: 1; } 
-	100% {transform: translateX(-250vw);}
+	0% {opacity: 0; }
+	15% {opacity: 1; } 
+	100% {transform: translateX(-2300px);}
 
 } 

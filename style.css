@@ -57,11 +57,10 @@ background-repeat: no-repeat;
 background-color: #010006;
 text-align: center;
 margin: 0px;
-/* overflow: hidden; */
-overflow: scroll;
+overflow: hidden;
 font-family: 'Zrnic';
-animation: textbounch;
-animation-duration: 1s;
+animation: textshow;
+animation-duration: 0.5s;
 }
 
 h1 {
@@ -81,28 +80,35 @@ color: #999;
 
 #marquee {
 font-family: 'DejaVuSansMono';
-font-size: 26px;
+font-size: 32px;
 width: 2300px;
 text-align: left;
 padding-left: 100vw;
 animation: marquee infinite;
-animation-duration: 90s;
+animation-duration: 70s;
+animation-delay: 5s;
 
 } 
 
 #msgs {
+visibility: hidden;
 font-size: 70px;
 color: white;
 animation: textshow;
-animation-duration: 1s;
+animation-duration: 0.5s;
+animation-delay: 0.3s;
+animation-fill-mode: forwards;
 } 
 
 #msgs2 {
+opacity: 0;
 padding-bottom: 0px;
 font-size: 48px;
 text-align: center;
 color: #e69b00;
-animation-duration: 0.35s;
+animation-duration: 0.2s;
+animation-delay: 0.5s;
+animation-fill-mode: forwards;
 } 
 
 .box {
@@ -138,21 +144,35 @@ background-color: #0058b1;
 
 /* Effects & Animations */
 
-.bounchingtext { animation: textbounch; } 
-.hidetext { animation: textfadeout; } 
-.showtext {animation: textshow; } 
+.bounching { animation: textbounch; } 
+.shaking { animation: textshake; } 
+.hiding { animation: textfadeout; } 
+.showing {animation: textshow; } 
+.zooming {animation: textzoom; } 
 .marquee {animation: textmarquee; } 
 
 @keyframes textbounch {
-     0% { font-size: 0px;  opacity: 0; } 
+     0% { font-size: 0px;  }
     20% { font-size: 78p8; } 
     40% { font-size: 28px; }
     60% { font-size: 78px; }
     80% { font-size: 38px; opacity: 1; }
+  100% { opacity: 1; }
 }
-
+@keyframes textshake {
+     0% { font-size: 0px;  }
+    20% { font-size: 78p8; transform: rotate(15deg); } 
+    40% { font-size: 28px; transform: rotate(-25deg); }
+    60% { font-size: 78px; transform: rotate(15deg); }
+    80% { font-size: 38px; opacity: 1; transform: rotate(-5deg); }
+  100% { opacity: 1; }
+}
+@keyframes textzoom {
+        0% { font-size: 0; opacity: 0; } 
+    100% { font-size: 48; opacity: 1; visibility: visible; } 
+}
 @keyframes textshow {
-      0% { opacity: 0; } 
+        0% { opacity: 0; } 
     100% { opacity: 1; visibility: visible; } 
 }
 
@@ -164,6 +184,6 @@ background-color: #0058b1;
 @keyframes marquee {
 	0% {opacity: 0; }
 	15% {opacity: 1; } 
-	100% {transform: translateX(-2300px);}
+	100% {transform: translateX(-2300px); }
 
 } 

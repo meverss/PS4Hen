@@ -8,13 +8,18 @@
 <title>PS4 Auto GoldHEN Host By MeVeRsS</title>
 <link rel="preload" href="Zrnic.ttf" as="font" type="font/truetype" crossorigin>
 <link rel="preload" href="DroidSansMono.ttf" as="font" type="font/truetype" crossorigin>
+<link rel="preload" href="GoMono.ttf" as="font" type="font/truetype" crossorigin>
+<link rel="preload" href="DejaVuSansMono.ttf" as="font" type="font/truetype" crossorigin>
+<link rel="preload" href="FiraCode.ttf" as="font" type="font/truetype" crossorigin>
+<link rel="preload" href="Monofur.ttf" as="font" type="font/truetype" crossorigin>
+<link rel="preload" href="Symbols.ttf" as="font" type="font/truetype" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
-<body onload="setTimeout(poc, 5000); toggle_anims(); ">
+<body onload="toggle_anims();">
 <script>
 function toggle_anims() {
-    window.msgs.classList.toggle('showtext');
-    window.msgs2.classList.toggle('bounchingtext');
+    msgs.classList.toggle('showing');
+    msgs2.classList.toggle('zooming');
 }
 history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));setTimeout(function(){window.msgs2.innerHTML="Instalando Cache Offline: " + Percent + "%";},500)}

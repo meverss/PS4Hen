@@ -8,6 +8,11 @@
 <title>PS4 Auto GoldHEN Host By MeVeRsS</title>
 <link rel="preload" href="Zrnic.ttf" as="font" type="font/truetype" crossorigin>
 <link rel="preload" href="DroidSansMono.ttf" as="font" type="font/truetype" crossorigin>
+<link rel="preload" href="GoMono.ttf" as="font" type="font/truetype" crossorigin>
+<link rel="preload" href="DejaVuSansMono.ttf" as="font" type="font/truetype" crossorigin>
+<link rel="preload" href="FiraCode.ttf" as="font" type="font/truetype" crossorigin>
+<link rel="preload" href="Monofur.ttf" as="font" type="font/truetype" crossorigin>
+<link rel="preload" href="Symbols.ttf" as="font" type="font/truetype" crossorigin>
 <link rel="stylesheet" href="style.css">
 <script src="int64.js"></script>
 <script src="rop.js"></script>
@@ -16,7 +21,7 @@
 </head>
 <body onload="setTimeout(poc, 5000); toggle_anims(); ">
 <script>
-if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
+if (window.applicationCache.status=='0'){window.location.replace("cache.html"); }
 </script>
 <h1 id=msgs >PS4 Auto GoldHEN Host By MeVeRsS</h1>
 <div class="box">
@@ -31,8 +36,8 @@ function allset(){
 }
 
 function toggle_anims() {
-    msgs.classList.toggle('showtext');
-    msgs2.classList.toggle('bounchingtext');
+    msgs.classList.toggle('showing');
+    msgs2.classList.toggle('zooming');
 }
 
 function load_poc(){

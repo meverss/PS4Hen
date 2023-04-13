@@ -3,6 +3,9 @@ CACHE MANIFEST
 CACHE: 
 img.jpg
 style.css
+Zrnic.woff
+Zrnic.woff2
+AurulentSansMono.woff
 goldhen_v2.4b5.bin
 Orbis-Toolbox-900.bin
 fan60.bin
@@ -12,5 +15,3 @@ int64.js
 kexploit.js
 rop.js
 webkit.js
-Zrnic.ttf
-DroidSansMono.ttf

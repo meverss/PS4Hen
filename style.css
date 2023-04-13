@@ -2,49 +2,15 @@
 
 @font-face {
  font-family: 'Zrnic';
- src: url('Zrnic.ttf') format('truetype');
+ src: url('Zrnic.woff') format('woff'), 
+         url('Zrnic.woff2') format('woff2') ;
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
- font-family: 'DroidSansMono';
- src: url('DroidSansMono.ttf') format('truetype'); 
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
- font-family: 'GoMono';
- src: url('GoMono.ttf') format('truetype'); 
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
- font-family: 'FiraCode';
- src: url('FiraCode.ttf') format('truetype'); 
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
- font-family: 'DejaVuSansMono';
- src: url('DejaVuSansMono.ttf') format('truetype'); 
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
- font-family: 'Monofur';
- src: url('Monofur.ttf') format('truetype'); 
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
- font-family: 'Symbols';
- src: url('Symbols.ttf') format('truetype'); 
+ font-family: 'AurulentSansMono';
+ src: url('AurulentSansMono.woff') format('woff'); 
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -58,14 +24,9 @@ background-color: #010006;
 text-align: center;
 margin: 0px;
 overflow: hidden;
-font-family: 'Zrnic';
+font-family: 'AurulentSansMono';
 animation: textshow;
-animation-duration: 0.5s;
-}
-
-h1 {
-/*font-family: 'Zrnic';*/
-/*animation-fill-mode: forwards;*/
+animation-duration: 2s;
 }
 
 a {
@@ -78,8 +39,38 @@ font-size: 36px;
 color: #999;
 }
 
+
+.contact {
+display: flex;
+visibility: hidden;
+margin: auto;
+justify-content: center;
+} 
+
+.contact > div {
+font-size: 24px;
+padding: 10px;
+animation: textshow;
+animation-duration: 0.3s;
+animation-delay: 1s;
+animation-fill-mode: forwards;
+} 
+
+.credits {
+visibility: hidden; 
+display: block;
+font-size: 22px;
+text-align: center;
+color: #888;
+animation: textshow;
+animation-duration: 0.3s;
+animation-delay: 1s;
+animation-fill-mode: forwards;
+
+} 
+
 #marquee {
-font-family: 'DejaVuSansMono';
+font-family: 'AurulentSansMono';
 font-size: 32px;
 width: 2300px;
 text-align: left;
@@ -92,8 +83,10 @@ animation-delay: 5s;
 
 #msgs {
 visibility: hidden;
+font-family: 'Zrnic';
 font-size: 70px;
-color: white;
+color: #4d82bc;
+margin-top: 20px;
 animation: textshow;
 animation-duration: 0.5s;
 animation-delay: 0.3s;
@@ -102,10 +95,13 @@ animation-fill-mode: forwards;
 
 #msgs2 {
 opacity: 0;
+/*font-family: 'Zrnic';*/
+font-family: 'AurulentSansMono';
 padding-bottom: 0px;
-font-size: 48px;
+font-size: 38px;
 text-align: center;
-color: #e69b00;
+color: #ddd;
+animation: textzoom;
 animation-duration: 0.2s;
 animation-delay: 0.5s;
 animation-fill-mode: forwards;
@@ -113,7 +109,7 @@ animation-fill-mode: forwards;
 
 .box {
 width: 100hv;
-height: 57vh;
+height: 58vh;
 position: static;
 } 
 

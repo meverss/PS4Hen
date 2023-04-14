@@ -2,8 +2,7 @@
 
 @font-face {
  font-family: 'Zrnic';
- src: url('Zrnic.woff') format('woff'), 
-         url('Zrnic.woff2') format('woff2') ;
+ src: url('Zrnic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -39,10 +38,19 @@ font-size: 36px;
 color: #999;
 }
 
+#info, #credits{
+opacity: 0;
+animation: textshow;
+animation-delay: 3s; 
+animation-fill-mode: forwards;
+} 
+
+#i_whatsapp {animation-delay: 4s;} 
+#i_email {animation-delay: 5s;} 
+#i_facebook {animation-delay: 6s;} 
 
 .contact {
 display: flex;
-visibility: hidden;
 margin: auto;
 justify-content: center;
 } 
@@ -50,23 +58,17 @@ justify-content: center;
 .contact > div {
 font-size: 24px;
 padding: 10px;
-animation: textshow;
-animation-duration: 0.3s;
-animation-delay: 1s;
+animation-duration: 1s;
 animation-fill-mode: forwards;
 } 
 
 .credits {
-visibility: hidden; 
 display: block;
+color: #888;
 font-size: 22px;
 text-align: center;
-color: #888;
 animation: textshow;
-animation-duration: 0.3s;
-animation-delay: 1s;
-animation-fill-mode: forwards;
-
+animation-delay: 3s;
 } 
 
 #marquee {
@@ -95,7 +97,6 @@ animation-fill-mode: forwards;
 
 #msgs2 {
 opacity: 0;
-/*font-family: 'Zrnic';*/
 font-family: 'AurulentSansMono';
 padding-bottom: 0px;
 font-size: 38px;
@@ -103,7 +104,7 @@ text-align: center;
 color: #ddd;
 animation: textzoom;
 animation-duration: 0.2s;
-animation-delay: 0.5s;
+animation-delay: 1s;
 animation-fill-mode: forwards;
 } 
 
@@ -146,6 +147,7 @@ background-color: #0058b1;
 .showing {animation: textshow; } 
 .zooming {animation: textzoom; } 
 .marquee {animation: textmarquee; } 
+.highlight {animation: texthighlight; }
 
 @keyframes textbounch {
      0% { font-size: 0px;  }
@@ -181,5 +183,11 @@ background-color: #0058b1;
 	0% {opacity: 0; }
 	15% {opacity: 1; } 
 	100% {transform: translateX(-2300px); }
+
+}
+
+@keyframes texthighlight {
+	  50% {font-size: 38px; transform: translateY(-30px);}
+	100% {font-size: 24px; transform: translateY(5px);}
 
 } 

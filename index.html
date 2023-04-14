@@ -6,34 +6,34 @@
 <meta name="robots" content="noindex, noarchive">
 <meta name="format-detection" content="telephone=no">
 <title>PS4 Auto GoldHEN Host By MeVeRsS</title>
-<link rel="preload" href="AurulentSansMono.woff" as="font" type="font/truetype" crossorigin>
-<link rel="preload" href="Zrnic.ttf" as="font" type="font/truetype" crossorigin>
 <link rel="stylesheet" href="style.css">
+<link rel="preload" href="AurulentSansMono.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="Zrnic.woff" as="font" type="font/woff" crossorigin>
 <script src="int64.js"></script>
 <script src="rop.js"></script>
 <script src="kexploit.js"></script>
 <script src="webkit.js"></script>
 </head>
-<body onload="setTimeout(poc, 2000); ">
+<body onload="setTimeout(poc, 5000); ">
 <script>
 if (window.applicationCache.status=='0'){window.location.replace("cache.html"); }
 </script>
 <h1 id=msgs >PS4 Auto GoldHEN Host By MeVeRsS</h1>
 <h1 id=msgs2 >Cargando GoldHEN. Espere por favor...</h1>
 <div class="box">
-    <!--<p style="font-size: 270px"> </p>-->
 </div> 
-<div id=info >
-    <div style="visibility: hidden; color: lightgreen">  58205225 </div>
-    <div style="visibility: hidden; color: salmon">  meverss@my.com </div>
-    <div style="visibility: hidden; color: lightblue">  @liontech85 </div>
-</div> 
-<div id=credits style="visibility: hidden" >Créditos a: SiSTRo, Al Azif, ChendoChap, Specter, Znullptr, Theflow0, PRB-Borg, Leeful, Sleirsgoevy y muchos más!!</div>--> 
+<div id=info class=contact>                                            
+    <div id=i_whatsapp style="color: lightgreen">  58205225 </div>
+    <div id=i_email style="color: salmon">  meverss@my.com </div>
+    <div id=i_facebook style="color: lightblue">  @liontech85 </div>
+</div>
+<div id=credits class=credits >Créditos a: SiSTRo, Al Azif, ChendoChap, Specter, Znullptr, Theflow0, PRB-Borg, Leeful, Sleirsgoevy y muchos más!!</div>
 <script>
 function allset(){
     msgs2.innerHTML = " GoldHEN cargado";
-    info.classList.add('contact');
-    credits.classList.add('credits');
+    i_whatsapp.classList.toggle('highlight');
+    i_email.classList.toggle('highlight');
+    i_facebook.classList.toggle('highlight');
 }
 
 function load_poc(){
@@ -76,7 +76,6 @@ load_poc();
 }
 
 function fan60(){
-LoadedMSG = "GoldHEN cargado";
 PLFile = "fan60.bin";
 load_poc();
 }

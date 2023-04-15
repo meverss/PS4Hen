@@ -20,22 +20,25 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
+} 
 
 html, body {
+opacity: 0;
 background-image: url('img.png');
 background-size: 145vh;
 background-position-x: center;
 background-repeat: no-repeat;
 background-color: #000;
+width:100%;
 text-align: center;
 margin: 0px;
 overflow: hidden;
 font-family: 'AurulentSansMono';
-font-size: 22px;
+font-size: 0.6vw;
 animation: textshow;
 animation-duration: 2s;
-width:100%;
+animation-delay: 2s;
+animation-fill-mode: forwards;
 
 }
 
@@ -50,9 +53,9 @@ animation-delay: 3s;
 animation-fill-mode: forwards;
 } 
 
-#i_whatsapp {animation-delay: 4s;} 
-#i_email {animation-delay: 4.6s;} 
-#i_facebook {animation-delay: 5.2s;} 
+#i_whatsapp {animation-delay: 5s;} 
+#i_email {animation-delay: 5.5s;} 
+#i_facebook {animation-delay: 6s;} 
 
 .contact {
 display: flex;
@@ -119,6 +122,7 @@ animation-fill-mode: forwards;
 display: inline-block;
 opacity: 0;
 font-family: 'AurulentSansMono';
+/*font-family: 'Scoreboard';*/
 font-size: 2.6vw;
 text-align: center;
 color: #0665ae ;
@@ -163,7 +167,7 @@ background-color: #0058b1;
 .showing {animation: textshow; } 
 .zooming {animation: textzoom; } 
 .marquee {animation: textmarquee; } 
-.highlight {animation: texthighlight; }
+.highlight {animation: texthighlight; animation-timing-function: easy;}
 
 @keyframes textbounch {
      0% { font-size: 0px;  }
@@ -203,7 +207,11 @@ background-color: #0058b1;
 }
 
 @keyframes texthighlight {
-	  50% {font-size: 4vw; transform: translateY(-10vh);}
-	100% {font-size: 1.5vw; transform: translateY(0px);}}
+	  50% {font-size: 2vw;}
+	100% {font-size: 1.6vw;}
 
+}
+@keyframes backgroundzoom {
+	  50% {background-size: 150vh;} 
+	100% {background-size: 145vh;animation-fill-mode: forwards;}
 } 

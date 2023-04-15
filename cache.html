@@ -15,9 +15,9 @@
 history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));setTimeout(function(){window.msgs2.innerHTML="Instalando Cache Offline: " + Percent + "%";},500)}
 function DisplayCacheProgress(){setTimeout(function(){window.msgs2.innerHTML="Cache instalada satisfactoriamente ✔";},1500);setTimeout(function(){window.msgs2.innerHTML="Ahora cierre y vuelva a abrir el Navegador.";},3500); 
-    i_whatsapp.classList.toggle('highlight');
+    /*i_whatsapp.classList.toggle('highlight');
     i_email.classList.toggle('highlight');
-    i_facebook.classList.toggle('highlight'); }
+    i_facebook.classList.toggle('highlight'); */}
 window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 </script>
 <h1 id=msgs >PS4 Auto GoldHEN Host By MeVeRsS</h1>
@@ -27,6 +27,6 @@ window.applicationCache.addEventListener("progress",DLProgress,false);window.app
     <div id=i_email style="color: salmon">  meverss@my.com </div>
     <div id=i_facebook style="color: lightblue">  @liontech85 </div>
 </div>
-<div id=credits class=credits >Créditos a: SiSTRo, Al Azif, ChendoChap, Specter, Znullptr, Theflow0, PRB-Borg, Leeful, Sleirsgoevy y muchos más!!</div>
+<div id=credits class=credits >Créditos a: SiSTRo, Al Azif, ChendoChap, Specter, Znullptr, Theflow0, Leeful, Sleirsgoevy y muchos más!!</div>
 </body>
 </html>

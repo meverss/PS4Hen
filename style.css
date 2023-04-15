@@ -14,12 +14,20 @@
     font-style: normal;
     font-display: swap;
 }
+@font-face {
+ font-family: 'Scoreboard';
+ src: url('scoreboard.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 html, body {
 background-image: url('img.png');
-background-size: 100%;
+background-size: 145vh;
+background-position-x: center;
 background-repeat: no-repeat;
-background-color: #010006;
+background-color: #000;
 text-align: center;
 margin: 0px;
 overflow: hidden;
@@ -27,16 +35,12 @@ font-family: 'AurulentSansMono';
 font-size: 22px;
 animation: textshow;
 animation-duration: 2s;
+width:100%;
+
 }
 
 a {
 text-decoration: none;
-}
-
-footer {
-padding-top: 0px;
-font-size: 36px;
-color: #999;
 }
 
 #info, #credits{
@@ -47,16 +51,15 @@ animation-fill-mode: forwards;
 } 
 
 #i_whatsapp {animation-delay: 4s;} 
-#i_email {animation-delay: 4.3s;} 
-#i_facebook {animation-delay: 4.6s;} 
+#i_email {animation-delay: 4.6s;} 
+#i_facebook {animation-delay: 5.2s;} 
 
 .contact {
-/* margin-top: 28px;*/
 display: flex;
 justify-content: center;
-/* KEEP IT FIXED IN CENTER */
+/* KEEP IT IN THE BOTTOM FIXED IN CENTER */
 width: 100%;
-bottom: 28px;
+bottom: 4.5vh;
 position: fixed;
 left: 50%;;
 transform: translate(-50%, 0);
@@ -65,21 +68,21 @@ animation: textshow;
 } 
 
 .contact > div {
-font-size: 24px;
-padding: 8px;
-animation-duration: 0.3s;
+font-size: 1.6vw;
+padding: 0.5vw;
+animation-duration: 0.4s;
 animation-fill-mode: forwards;
 } 
 
 .credits {
 bottom: 0;
-margin-bottom: 10px;
+margin-bottom: 1.8vw;
 color: #888;
-font-size: 22px;
+font-size: 1.3vw;
 animation-delay: 3s;
 animation-fill-mode: forwards;
 width: 100%;
-height: 22px;
+height: 1.6vh;
 position: fixed;
 left: 50%;;
 transform: translate(-50%, 0);
@@ -103,9 +106,9 @@ animation-delay: 5s;
 visibility: hidden;
 width: 100%;
 font-family: 'Zrnic';
-font-size: 70px;
-color: #0666b0;
-margin-top: 20px;
+font-size: 5vw;
+color: white;
+margin-top: 15px;
 animation: textshow;
 animation-duration: 0.5s;
 animation-delay: 0.3s;
@@ -113,15 +116,17 @@ animation-fill-mode: forwards;
 } 
 
 #msgs2 {
+display: inline-block;
 opacity: 0;
 font-family: 'AurulentSansMono';
-padding-bottom: 0px;
-font-size: 38px;
+font-size: 2.6vw;
 text-align: center;
-color: #ddd;
+color: #0665ae ;
+margin-top: 45vh;
+padding: 5px;
 animation: textzoom;
 animation-duration: 0.2s;
-animation-delay: 1s;
+animation-delay: 0.5s;
 animation-fill-mode: forwards;
 } 
 
@@ -198,7 +203,7 @@ background-color: #0058b1;
 }
 
 @keyframes texthighlight {
-	  50% {font-size: 48px; transform: translateY(-80px);}
-	100% {font-size: 24px; transform: translateY(0px);}}
+	  50% {font-size: 4vw; transform: translateY(-10vh);}
+	100% {font-size: 1.5vw; transform: translateY(0px);}}
 
 } 

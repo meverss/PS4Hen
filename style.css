@@ -15,8 +15,8 @@
     font-display: swap;
 }
 @font-face {
- font-family: 'Scoreboard';
- src: url('scoreboard.ttf') format('truetype');
+ font-family: 'LCDDot';
+ src: url('lcddot.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -24,13 +24,11 @@
 
 html, body {
 opacity: 0;
-background-image: url('img.png');
-background-size: 160vh;
+background-image: url('img.jpg');
+background-size: 100%;
 background-position-x: center;
 background-repeat: no-repeat;
 background-color: #000;
-width:100%;
-height:100%;
 text-align: center;
 color: white;
 margin: 0px;
@@ -39,8 +37,18 @@ font-family: 'AurulentSansMono';
 font-size: 0.6vw;
 animation: textshow 2s ease 2s;
 animation-fill-mode: forwards;
-
 }
+
+.logo {
+position: fixed;
+top: 10vh;
+width: 45vh;
+height: 45vh;
+left: 50%;;
+transform: translate(-50%, 0);
+animation: zoom 3s linear 2s;
+animation-fill-mode: forwards;
+} 
 
 a {
 text-decoration: none;
@@ -52,14 +60,13 @@ animation: textshow 1s ease 3s;
 animation-fill-mode: forwards;
 } 
 
-#i_whatsapp {animation-delay: 5s;} 
-#i_email {animation-delay: 5.5s;} 
-#i_facebook {animation-delay: 6s;} 
+#i_whatsapp {animation-delay: 3s;} 
+#i_email {animation-delay: 3s;} 
+#i_facebook {animation-delay: 3s;} 
 
 .contact {
 display: flex;
 justify-content: center;
-/* KEEP IT IN THE BOTTOM FIXED IN CENTER */
 width: 100%;
 bottom: 4.5vh;
 position: fixed;
@@ -70,6 +77,7 @@ transform: translate(-50%, 0);
 .contact > div {
 font-size: 1.6vw;
 padding: 0.5vw;
+animation-fill-mode: forwards;
 } 
 
 .credits {
@@ -99,7 +107,6 @@ animation-delay: 5s;
 } 
 
 #msgs {
-visibility: hidden;
 width: 100%;
 font-family: 'Zrnic';
 font-size: 5vw;
@@ -111,15 +118,13 @@ animation-fill-mode: forwards;
 
 #msgs2 {
 display: inline-block;
-opacity: 0;
 font-family: 'AurulentSansMono';
-/*font-family: 'Scoreboard';*/
 font-size: 2.6vw;
 text-align: center;
 color: #0665ae ;
-margin-top: 45vh;
+margin-top: 50vh;
 padding: 5px;
-animation: textzoom 0.2s ease 0.5s;
+animation: textzoom1 0.2s ease 0.5s;
 animation-fill-mode: forwards;
 } 
 
@@ -154,7 +159,7 @@ background-color: #0058b1;
 .shaking { animation: textshake; } 
 .hiding { animation: textfadeout; } 
 .showing {animation: textshow; } 
-.zooming {animation: textzoom 2s ease 1s; } 
+.zooming {animation: textzoom 2s ease 3s; } 
 .marquee {animation: textmarquee; } 
 .highlight {animation: texthighlight 2s ease 1s;}
 
@@ -175,6 +180,10 @@ background-color: #0058b1;
   100% { opacity: 1; }
 }
 @keyframes textzoom {
+        0% { font-size: 0; opacity: 0; } 
+    100% { font-size: 1.6vw; opacity: 1; } 
+}
+@keyframes textzoom1 {
         0% { font-size: 0; opacity: 0; } 
     100% { font-size: 2.6vw; opacity: 1; } 
 }
@@ -203,4 +212,7 @@ background-color: #0058b1;
 @keyframes backgroundzoom {
 	 50% {background-size: 160vh;}
 	100% {background-size: 145vh;}
-} 
+}
+@keyframes zoom {
+	100% {transform: scale(1.5,1.5) translate(-33%, 10%); } 
+}

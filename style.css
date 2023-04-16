@@ -27,7 +27,7 @@ opacity: 0;
 background-image: url('img.jpg');
 background-size: 100%;
 background-position-x: center;
-background-repeat: no-repeat;
+background-repeat: repeat-y;
 background-color: #000;
 text-align: center;
 color: white;

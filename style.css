@@ -25,19 +25,19 @@
 html, body {
 opacity: 0;
 background-image: url('img.png');
-background-size: 145vh;
+background-size: 160vh;
 background-position-x: center;
 background-repeat: no-repeat;
 background-color: #000;
 width:100%;
+height:100%;
 text-align: center;
+color: white;
 margin: 0px;
 overflow: hidden;
 font-family: 'AurulentSansMono';
 font-size: 0.6vw;
-animation: textshow;
-animation-duration: 2s;
-animation-delay: 2s;
+animation: textshow 2s ease 2s;
 animation-fill-mode: forwards;
 
 }
@@ -48,8 +48,7 @@ text-decoration: none;
 
 #info, #credits{
 opacity: 0;
-animation: textshow;
-animation-delay: 3s; 
+animation: textshow 1s ease 3s;
 animation-fill-mode: forwards;
 } 
 
@@ -66,15 +65,11 @@ bottom: 4.5vh;
 position: fixed;
 left: 50%;;
 transform: translate(-50%, 0);
-animation: textshow;
-
 } 
 
 .contact > div {
 font-size: 1.6vw;
 padding: 0.5vw;
-animation-duration: 0.4s;
-animation-fill-mode: forwards;
 } 
 
 .credits {
@@ -89,8 +84,6 @@ height: 1.6vh;
 position: fixed;
 left: 50%;;
 transform: translate(-50%, 0);
-animation: textshow;
-
 } 
 
 #marquee {
@@ -112,9 +105,7 @@ font-family: 'Zrnic';
 font-size: 5vw;
 color: white;
 margin-top: 15px;
-animation: textshow;
-animation-duration: 0.5s;
-animation-delay: 0.3s;
+animation: textshow 0.5s ease 0.3s;
 animation-fill-mode: forwards;
 } 
 
@@ -128,9 +119,7 @@ text-align: center;
 color: #0665ae ;
 margin-top: 45vh;
 padding: 5px;
-animation: textzoom;
-animation-duration: 0.2s;
-animation-delay: 0.5s;
+animation: textzoom 0.2s ease 0.5s;
 animation-fill-mode: forwards;
 } 
 
@@ -165,9 +154,9 @@ background-color: #0058b1;
 .shaking { animation: textshake; } 
 .hiding { animation: textfadeout; } 
 .showing {animation: textshow; } 
-.zooming {animation: textzoom; } 
+.zooming {animation: textzoom 2s ease 1s; } 
 .marquee {animation: textmarquee; } 
-.highlight {animation: texthighlight; animation-timing-function: easy;}
+.highlight {animation: texthighlight 2s ease 1s;}
 
 @keyframes textbounch {
      0% { font-size: 0px;  }
@@ -187,7 +176,7 @@ background-color: #0058b1;
 }
 @keyframes textzoom {
         0% { font-size: 0; opacity: 0; } 
-    100% { font-size: 48; opacity: 1; visibility: visible; } 
+    100% { font-size: 2.6vw; opacity: 1; } 
 }
 @keyframes textshow {
         0% { opacity: 0; } 
@@ -212,6 +201,6 @@ background-color: #0058b1;
 
 }
 @keyframes backgroundzoom {
-	  50% {background-size: 150vh;} 
-	100% {background-size: 145vh;animation-fill-mode: forwards;}
+	 50% {background-size: 160vh;}
+	100% {background-size: 145vh;}
 } 

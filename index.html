@@ -15,7 +15,7 @@
 <script src="kexploit.js"></script>
 <script src="webkit.js"></script>
 </head>
-<body onload="setTimeout(poc, 5800);">
+<body onload="setTimeout(poc, 5000); anim_info();">
 <script>
 if (window.applicationCache.status=='0'){window.location.replace("cache.html"); }
 </script>
@@ -29,9 +29,10 @@ if (window.applicationCache.status=='0'){window.location.replace("cache.html"); 
 <div id=credits class=credits >Créditos a: SiSTRo, Al Azif, ChendoChap, Specter, Znullptr, Theflow0, Leeful, Sleirsgoevy y muchos más!!</div>
 <script>
 function anim_info(){
-    i_whatsapp.classList.toggle('highlight');
+/*    document.body.style.animation="backgroundzoom";*/
+/*    i_whatsapp.classList.toggle('highlight');
     i_email.classList.toggle('highlight');
-    i_facebook.classList.toggle('highlight');
+    i_facebook.classList.toggle('highlight');*/
 }
 
 function allset(){

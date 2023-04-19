@@ -44,11 +44,11 @@ animation-fill-mode: forwards;
 .logo {
 position: fixed;
 top: 10vh;
-width: 45vh;
-height: 45vh;
+width: 35vh;
+height: 35vh;
 left: 50%;;
 transform: translate(-50%, 0);
-animation: zoom 2s linear 2.5s;
+animation: zoom 1.5s linear 2.5s;
 animation-fill-mode: forwards;
 } 
 
@@ -124,7 +124,7 @@ font-family: 'AurulentSansMono';
 font-size: 2.6vw;
 text-align: center;
 color: #0665ae ;
-margin-top: 50vh;
+margin-top: 53vh;
 padding: 5px;
 animation: textzoom1 0.2s ease 0.5s;
 animation-fill-mode: forwards;
@@ -216,5 +216,5 @@ background-color: #0058b1;
 	100% {background-size: 145vh;}
 }
 @keyframes zoom {
-	100% {transform: scale(1.5,1.5) translate(-33%, 10%); } 
+	100% {transform: scale(1.5,1.5) translate(-33%, 28%); } 
 }

@@ -57,7 +57,7 @@ top: 35vh;
 width: 30vh;
 height: 30vh;
 left: 50%;
-transform: translate(-50%, 0);
+transform: translate(-50%, 25%);
 animation: logoshow .1s linear .5s;
 animation-fill-mode: forwards;
 } 

@@ -1,24 +1,22 @@
 /* My Fonts */
 
-@charset "utf-8";
-
 @font-face {
  font-family: 'Zrnic';
- src: url('zrnic.woff') format('woff');
+ src: url('Zrnic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
  font-family: 'AurulentSansMono';
- src: url('aurulentsm.woff') format('woff'); 
+ src: url('AurulentSansMono.woff') format('woff'); 
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
- font-family: 'LCDDot';
- src: url('lcddot.ttf') format('truetype');
+ font-family: 'Scoreboard';
+ src: url('scoreboard.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -28,29 +26,15 @@ html, body {
 opacity: 0;
 background-image: url('img.jpg');
 background-size: 100%;
-background-position-x: center;
-background-repeat: repeat-y;
-background-color: #000;
+background-repeat: no-repeat;
+background-color: black;
 text-align: center;
 color: white;
-margin: 0px;
+margin: 0;
 overflow: hidden;
 font-family: 'AurulentSansMono';
 font-size: 0.6vw;
-animation: textshow 1s ease 2s;
-animation-fill-mode: forwards;
-}
-
-.logo {
-opacity: 0;
-top: 25;
-position: fixed;
-width: 22vw;
-height: 22vw;
-justify-content: center;
-left: 50%;
-transform: translate(-50%, 0);
-animation: textshow 1s linear 2.5s;
+animation: textshow 2s ease 1s;
 animation-fill-mode: forwards;
 }
 
@@ -58,9 +42,56 @@ a {
 text-decoration: none;
 }
 
+hr {
+width: 90%;
+box-shadow: 1px 1px black;
+border-radius: 8px;
+opacity: .2;
+margin-top: -5vh;
+} 
+
+.logo {
+opacity: 0;
+position: fixed;
+top: 35vh;
+width: 30vh;
+height: 30vh;
+left: 50%;
+transform: translate(-50%, 0);
+animation: logoshow .1s linear .5s;
+animation-fill-mode: forwards;
+} 
+
+#msgs {
+visibility: hidden;
+font-family: 'Zrnic';
+font-size: 6.8vw;
+color: #eee;
+width: 100%
+height: 10vh;
+margin-top: 20px;
+text-shadow: 1px 1px 1px black;
+animation: textshow 0.5s ease 0.3s;
+animation-fill-mode: forwards;
+} 
+
+#msgs2 {
+display: inline-block;
+font-family: 'AurulentSansMono';
+font-size: 3vw;
+text-shadow: 1px 1px 1px black;
+width: 100%;
+height: 8vh;
+text-align: center;
+color: #0665ae ;
+padding: 5px;
+animation: textshow 0.2s ease 0.5s;
+animation-fill-mode: forwards;
+}  
+
 #info, #credits{
 opacity: 0;
-animation: textshow 1s ease 4s;
+animation: textshow 1s ease 3s;
 animation-fill-mode: forwards;
 } 
 
@@ -70,14 +101,13 @@ justify-content: center;
 width: 100%;
 bottom: 4.5vh;
 position: fixed;
-left: 50%;;
+left: 50%;
 transform: translate(-50%, 0);
 } 
 
-.contact div {
+.contact > div {
 font-size: 1.6vw;
 padding: 0.5vw;
-animation-fill-mode: forwards;
 } 
 
 .credits {
@@ -103,30 +133,7 @@ padding-left: 100vw;
 animation: marquee infinite;
 animation-duration: 70s;
 animation-delay: 5s;
-
-} 
-
-#msgs {
-width: 100%;
-font-family: 'Zrnic';
-font-size: 5vw;
-color: white;
-margin-top: 15px;
-animation: textshow 0.5s ease 0.3s;
-animation-fill-mode: forwards;
-} 
-
-#msgs2 {
-display: inline-block;
-font-family: 'AurulentSansMono';
-font-size: 2.6vw;
-text-align: center;
-color: #0665ae ;
-margin-top: 53vh;
-padding: 5px;
-animation: textzoom1 0.2s ease 0.5s;
-animation-fill-mode: forwards;
-} 
+}
 
 .btn {
 background-color: white;
@@ -159,7 +166,7 @@ background-color: #0058b1;
 .shaking { animation: textshake; } 
 .hiding { animation: textfadeout; } 
 .showing {animation: textshow; } 
-.zooming {animation: textzoom 2s ease 3s; } 
+.zooming {animation: textzoom 2s ease 1s; } 
 .marquee {animation: textmarquee; } 
 .highlight {animation: texthighlight 2s ease 1s;}
 
@@ -181,38 +188,30 @@ background-color: #0058b1;
 }
 @keyframes textzoom {
         0% { font-size: 0; opacity: 0; } 
-    100% { font-size: 1.6vw; opacity: 1; } 
-}
-@keyframes textzoom1 {
-        0% { font-size: 0; opacity: 0; } 
     100% { font-size: 2.6vw; opacity: 1; } 
 }
 @keyframes textshow {
-      0% { opacity: 0; } 
+        0% { opacity: 0; } 
     100% { opacity: 1; visibility: visible; } 
 }
-
 @keyframes textfadeout {
       0% { opacity: 1; } 
     100% { opacity: 0;  visibility: hidden; } 
 }
-
 @keyframes marquee {
 	0% {opacity: 0; }
 	15% {opacity: 1; } 
 	100% {transform: translateX(-2300px); }
-
 }
-
 @keyframes texthighlight {
 	  50% {font-size: 2vw;}
 	100% {font-size: 1.6vw;}
-
 }
 @keyframes backgroundzoom {
 	 50% {background-size: 160vh;}
 	100% {background-size: 145vh;}
 }
-@keyframes zoom {
-	100% {transform: scale(1.5,1.5) translate(-33%, 28%); } 
-}
+@keyframes logoshow {
+      0% { opacity: 0; } 
+    100% { opacity: .3; } 
+} 

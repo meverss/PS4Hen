@@ -51,14 +51,19 @@ margin-top: -5vh;
 } 
 
 .logo {
-opacity: 0;
 position: fixed;
 top: 35vh;
 width: 30vh;
 height: 30vh;
 left: 50%;
 transform: translate(-50%, 25%);
-animation: logoshow .1s linear .5s;
+} 
+
+#logo {
+opacity: 0;
+width: 100%;
+height: 100%;
+animation: logoshow 5s linear .5s, spin 5s linear infinite ;
 animation-fill-mode: forwards;
 } 
 
@@ -214,4 +219,8 @@ background-color: #0058b1;
 @keyframes logoshow {
       0% { opacity: 0; } 
     100% { opacity: .3; } 
+}
+@keyframes spin {
+      from { transform: rotateY(0deg); } 
+      to { transform: rotateY(360deg); } 
 } 

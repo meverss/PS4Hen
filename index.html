@@ -15,10 +15,7 @@
 <script src="kexploit.js"></script>
 <script src="webkit.js"></script>
 </head>
-<body onload="setTimeout(poc, 5000)">
-<script>
-if (window.applicationCache.status=='0'){window.location.replace("cache.html"); }
-</script>
+<body onload=checkmobile() >
 <h1 id=msgs >PS4 Auto GoldHEN Host By MeVeRsS</h1>
 <hr>
 <div id=msgs2 >Cargando GoldHEN. Espere por favor...</div>
@@ -32,6 +29,17 @@ if (window.applicationCache.status=='0'){window.location.replace("cache.html"); 
 </div>
 <div id=credits class=credits >Créditos a: SiSTRo, Al Azif, ChendoChap, Specter, Znullptr, Theflow0, Leeful, Sleirsgoevy y muchos más!!</div>
 <script>
+function checkmobile() {
+var width = window.innerWidth
+if (width <= 450){ 
+
+msgs2.innerHTML = "Versión Mobil <br>(Solo de muestra. Host diseñado para PS4) ";
+} else {
+	setTimeout(poc, 5000); 
+	if (window.applicationCache.status=='0'){window.location.replace("cache.html"); }  
+} 
+} 
+
 function allset(){
     msgs2.innerHTML = " GoldHEN cargado";
 }
